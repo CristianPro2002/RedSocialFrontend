@@ -1,4 +1,4 @@
-import { VariablesEntorno } from "utils/constants/env";
+import { VariablesEntorno } from "../utils/constants/env";
 import { Box } from "@mui/material";
 
 const UserImage = ({ image, size = "60px" }) => {

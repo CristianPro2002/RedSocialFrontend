@@ -1,5 +1,5 @@
 import { Typography, useTheme } from "@mui/material";
-import { VariablesEntorno } from "utils/constants/env";
+import { VariablesEntorno } from "../../utils/constants/env";
 import FlexBetween from "../../components/FlexBetween";
 import WidgetWrapper from "../../components/WidgetWrapper";
 
