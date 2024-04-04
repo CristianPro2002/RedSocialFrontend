@@ -1,3 +1,4 @@
+import { VariablesEntorno } from "utils/constants/env";
 import { Box } from "@mui/material";
 
 const UserImage = ({ image, size = "60px" }) => {
@@ -8,7 +9,7 @@ const UserImage = ({ image, size = "60px" }) => {
         width={size}
         height={size}
         alt="user"
-        src={`http://localhost:3001/assets/${image}`}
+        src={`${VariablesEntorno.URL_BACKEND}/assets/${image}`}
       />
     </Box>
   );
