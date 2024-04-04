@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFriends } from "../../state";
 import { Box, Typography, useTheme } from "@mui/material";
-import { VariablesEntorno } from "utils/constants/env";
+import { VariablesEntorno } from "../../utils/constants/env";
 import Friend from "../../components/Friend";
 import WidgetWrapper from "../../components/WidgetWrapper";
 

@@ -13,7 +13,7 @@ import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setLogin } from "../../state";
-import { VariablesEntorno } from "utils/constants/env";
+import { VariablesEntorno } from "../utils/constants/env";
 import Dropzone from "react-dropzone";
 import FlexBetween from "../../components/FlexBetween";
 
