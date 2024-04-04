@@ -13,6 +13,7 @@ import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setLogin } from "../../state";
+import { VariablesEntorno } from "utils/constants/env";
 import Dropzone from "react-dropzone";
 import FlexBetween from "../../components/FlexBetween";
 
@@ -64,7 +65,7 @@ const Form = () => {
     formData.append("picturePath", values.picture.name);
 
     const savedUserResponse = await fetch(
-      "https://redsocialbackend-gspl.onrender.com/auth/register",
+      `${VariablesEntorno.URL_BACKEND}/auth/register`,
       {
         method: "POST",
         body: formData,
@@ -79,7 +80,7 @@ const Form = () => {
   };
 
   const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await fetch("https://redsocialbackend-gspl.onrender.com/auth/login", {
+    const loggedInResponse = await fetch(`${VariablesEntorno.URL_BACKEND}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),

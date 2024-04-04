@@ -2,6 +2,7 @@ import { Box, useMediaQuery } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { VariablesEntorno } from "utils/constants/env";
 import Navbar from "../navbar";
 import FriendListWidget from "../widgets/FriendListWidget";
 import MyPostWidget from "../widgets/MyPostWidget";
@@ -15,7 +16,7 @@ export default function ProfilePage () {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
 
   const getUser = async () => {
-    const response = await fetch(`https://redsocialbackend-gspl.onrender.com/users/${userId}`, {
+    const response = await fetch(`${VariablesEntorno.URL_BACKEND}/users/${userId}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
